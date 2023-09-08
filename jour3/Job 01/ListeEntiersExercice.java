@@ -1,5 +1,6 @@
 /*
-    ListeEntiersExercice.javaby: https://github.com/Yassineelg
+    ListeEntiersExercice.java
+    by: https://github.com/Yassineelg
     mail: yassineelgherrabi@gmail.com
     created: 08/09/2023
 */
