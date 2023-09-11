@@ -1,14 +1,14 @@
 /*
- * SynchronizationExercice.java
+ * LockExercice.java
  * by: https://github.com/Yassineelg
  * mail: yassineelgherrabi@gmail.com
  * created: 11/09/2023
  */
 
-public class SynchronizationExercice {
+public class LockExercice {
     public static void main(String[] args) {
         if (args.length != 2) {
-            System.err.println("Utilisation : java Main <solde initial> <montant à retirer>");
+            System.err.println("Utilisation : java LockExercice <solde initial> <montant à retirer>");
             System.exit(1);
         }
 
@@ -23,10 +23,11 @@ public class SynchronizationExercice {
 
             thread1.start();
             thread2.start();
-            System.out.println("Solde final: " + bankAccount.getBalance() + ".");
 
             thread1.join();
             thread2.join();
+
+            System.out.println("Solde final: " + bankAccount.getBalance() + ".");
         } catch (NumberFormatException e) {
             System.err.println("Les arguments doivent être des nombres entiers valides.");
         } catch (InterruptedException e) {
